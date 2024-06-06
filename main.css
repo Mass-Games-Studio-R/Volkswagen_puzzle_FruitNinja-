@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body,
+body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+#loader-container {
+  z-index: 2000;
+  width: 320px;
+  height: 480px;
+  position: absolute;
+  background: #da7c22;
+  z-index: 10000;
+  border: 1px solid #000;
+}
+
+#loader {
+  width: 31px;
+  height: 31px;
+  margin: 224px auto;
+  display: block;
+}
+
+
+/* Div layer for the entire container. */
+#dc_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: none;
+  background: #da7c22;
+  z-index: 2001;
+}
+
+#dc_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  /*z-index     : 100;
+background-color:#da7c22;*/
+}
+
+#backDropDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  /*background-color: #df8223;*/
+  opacity: 1;
+  z-index: 1;
+  /*background      : url(images/background.jpg) no-repeat 0 -100px;*/
+
+}
+
+#internalDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: none;
+  overflow: hidden;
+}
+
+.positionAb {
+  position: absolute;
+}
+
+.positionAbFull {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.positionRel {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.h-center {
+  margin: 0 auto;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (orientation: portrait) {
+  .scene {
+    transform: rotate(270deg);
+    width: 100vh !important;
+    height: 100vw !important;
+  }
+}
+
+/* Invisible button for background clickthrough. */
+
+#dc_background_exit {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 299;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+}
+
+#dc_bgImage {
+  position: absolute;
+  background-color: #343434;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#dc_expand_logo {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+#dc_btnClose {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1px;
+  right: 1px;
+  z-index: 1999;
+  cursor: pointer;
+  transform: scale(0)
+}
+
+#dc_btnClose > img {
+  width: 100%;
+  height: 100%;
+}
+
+.scene {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+}
+
+.scene_container {
+  width: 100%;
+  height: 100%;
+}
+
+#game_timer {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  width: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_clock {
+  margin-top: 2px;
+}
+
+.game_clock img {
+  height: 18px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.game_current_time {
+  padding: 4px 0px 4px 8px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.game_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 8%;
+  margin-bottom: -6%;
+}
+
+.messages {
+  width: 40%;
+  margin-top: -2%;
+}
+
+.message:not(#message_intro) {
+  opacity: 0;
+}
+
+#message_finish {
+  top: -20%;
+}
+
+.car_part:not(#car_lines) {
+  opacity: 0;
+}
+
+.puzzle_wrapper {
+  pointer-events: none;
+  width: 60%;
+}
+
+#button_1 {
+  width: 15%;
+  top: 15%;
+  left: 17%;
+}
+
+#button_2 {
+  width: 8%;
+  left: 10%;
+  top: 35%;
+}
+
+#button_3 {
+  width: 7.5%;
+  bottom: 4%;
+  left: 15%;
+}
+
+#button_4 {
+  width: 7%;
+  right: 15%;
+  top: 9%;
+}
+
+#button_5 {
+  width: 7%;
+  right: 9%;
+  top: 41%;
+}
+
+#button_6 {
+  width: 20%;
+  bottom: 10%;
+  right: 6%;
+}
+
+#endFrame {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.endFrame_copys {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  right: -5%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.endFrame_logo {
+  width: 18%;
+  margin-top: 5%;
+}
+
+.endFrame_txt {
+  width: 75%;
+}
+
+.cta {
+  width: 40%;
+}
+
+.cta_wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width:1200px) {
+  #internalDiv {
+    max-width: 50vh;
+    max-height: 900px;
+  }
+}
+
+.tablet .scene_container {
+  height: 80%;
+  position: absolute;
+  top: 10%;
+}
