@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
 body,
 body * {
   vertical-align: baseline;
@@ -10,7 +9,10 @@ body * {
   padding: 0;
   margin: 0;
 }
-
+#internalDiv {
+  position: relative !important;
+  left: 0px !important;
+}
 
 #loader-container {
   z-index: 2000;
@@ -28,7 +30,6 @@ body * {
   margin: 224px auto;
   display: block;
 }
-
 
 /* Div layer for the entire container. */
 #dc_container {
@@ -61,7 +62,6 @@ background-color:#da7c22;*/
   opacity: 1;
   z-index: 1;
   /*background      : url(images/background.jpg) no-repeat 0 -100px;*/
-
 }
 
 #internalDiv {
@@ -162,7 +162,7 @@ background-color:#da7c22;*/
   right: 1px;
   z-index: 1999;
   cursor: pointer;
-  transform: scale(0)
+  transform: scale(0);
 }
 
 #dc_btnClose > img {
@@ -208,7 +208,7 @@ background-color:#da7c22;*/
 .game_current_time {
   padding: 4px 0px 4px 8px;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
 }
@@ -317,10 +317,10 @@ background-color:#da7c22;*/
   height: 100%;
 }
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width: 1200px) {
   #internalDiv {
-    max-width: 50vh;
-    max-height: 900px;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
