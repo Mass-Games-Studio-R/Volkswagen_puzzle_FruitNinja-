@@ -284,7 +284,6 @@ const initDrag = () => {
 
           gsap.to(["#message_finish"], { duration: 0.5, opacity: 1, delay: 3 });
           //setTimeout(gameEnd, 0.1);
-          console.log("scroore complete");
 
           const tl = gsap.timeline();
           tl.to(
